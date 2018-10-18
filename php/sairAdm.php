@@ -1,0 +1,9 @@
+<?php
+	session_start();
+	unset($_SESSION['type']);
+  	unset($_SESSION['request']);
+	unset($_SESSION['matriculaAdm']);
+	unset($_SESSION['ErrorAdm']);
+	unset($_SESSION['statusAdm']);
+	header('location:../');
+?>
