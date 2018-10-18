@@ -8,7 +8,7 @@
 		
 		protected $host = "arioliveira.com";
 		protected $user = "ariolive_ifrn18";
-		protected $senha = "ariolive_ifrn18";
+		protected $pwd = "ariolive_ifrn18";
 		protected $database = "ariolive_t1g1";
 
 		public function __construct($matricula, $senha, $nome = "", $email = "", $campus = "")
@@ -22,7 +22,7 @@
 			$this->select_user1 = "SELECT * FROM Usuario AS u WHERE u.matricula = '$matricula' AND u.senha = '$senha'";
 			$this->select_user2 = "SELECT * FROM Usuario AS u WHERE u.matricula = '$matricula' OR u.nome = '$nome' OR u.senha = '$senha' ";
 
-			$this->connect = mysqli_connect($this->host,$this->$user,$this->senha,$this->database) or die("Não foi possivel conectar ao banco de dados"); 
+			$this->connect = mysqli_connect($this->host,$this->$user,$this->pwd,$this->database) or die("Não foi possivel conectar ao banco de dados"); 
 		}
 		public function valid()
 		{
@@ -86,7 +86,7 @@
 
 		public function valid($matricula, $senha)
 		{
-			$connect = mysqli_connect($host,$user,$senha,$database) or die("Não foi possivel conectar ao banco de dados"); 
+			$connect = mysqli_connect($this->host,$this->user,$this->pwd,$this->database) or die("Não foi possivel conectar ao banco de dados"); 
 			$select = "SELECT * FROM Administrador AS a WHERE a.matricula = '$matricula' AND a.senha = '$senha'";
 			$query = mysqli_query($connect, $select);
 			if(mysqli_num_rows($query) > 0)
