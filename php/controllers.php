@@ -22,7 +22,7 @@
 			$this->select_user1 = "SELECT * FROM Usuario AS u WHERE u.matricula = '$matricula' AND u.senha = '$senha'";
 			$this->select_user2 = "SELECT * FROM Usuario AS u WHERE u.matricula = '$matricula' OR u.nome = '$nome' OR u.senha = '$senha' ";
 
-			$this->connect = mysqli_connect($this->host,$this->$user,$this->pwd,$this->database) or die("Não foi possivel conectar ao banco de dados"); 
+			$this->connect = mysqli_connect($this->host,$this->user,$this->pwd,$this->database) or die("Não foi possivel conectar ao banco de dados"); 
 		}
 		public function valid()
 		{

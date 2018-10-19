@@ -1,5 +1,6 @@
 <?php
 	
+	
 	$host = "arioliveira.com";
 	$user = "ariolive_ifrn18";
 	$pwd = "ariolive_ifrn18";
