@@ -83,6 +83,10 @@
 	class ControllerAdmin
 	{
 		public $nome, $matricula;
+		protected $host = "arioliveira.com";
+		protected $user = "ariolive_ifrn18";
+		protected $pwd = "ariolive_ifrn18";
+		protected $database = "ariolive_t1g1";
 
 		public function valid($matricula, $senha)
 		{
@@ -130,7 +134,7 @@
 				else
 				{
 					$_SESSION['status'] = 0;
-					$_SESSION['Error'] = "Senha ou matricula está incorreto!";
+					$_SESSION['Error'] = "Senha ou matricula está incorreta!";
 					
 					$controller->close_connect();
 					header("location: ../login.php");

@@ -23,7 +23,7 @@
 				<div class="container" style="margin-top: 80px">
 					<div class="row" style="margin-bottom: 18px">
 						<div class="col-12">
-							<h3 style="color:black">Agendamentos <span style="color: #DAA520">Pendentes</span></h3>
+							<h3 style="color:black"><i class="fa fa-calendar-o" aria-hidden="true"></i> Agendamentos <span style="color: #DAA520">Pendentes</span></h3>
 						</div>
 					</div>
 
@@ -44,7 +44,8 @@
 				</div>
 		</body>
 
-		<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/demoAdm.js"></script>
+		<?php include "includes/footer.php"; ?>
+
 		
 </html>

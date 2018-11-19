@@ -19,7 +19,7 @@
 		 {
 		 	if(mysqli_num_rows($result) > 0){
 				echo " <tr>
-					      <td>" . $row[0] . " (" . $row[1] . ")</td>
+					      <td scope='row'>" . $row[0] . " (" . $row[1] . ")</td>
 					      <td id='data_table'>" . str_replace("-", "/", $row[2]) . "</td>
 					      <td>" . $row[3] . "</td>
 					      <td>" . $row[4] . " (" . $row[5] . " )</td>
@@ -38,7 +38,7 @@
 		{
 			if(mysqli_num_rows($result) > 0){
 				echo " <tr>
-					      <td>" . $row[0] . " (" . $row[1] . ")</td>
+					      <td scope='row'>" . $row[0] . " (" . $row[1] . ")</td>
 					      <td>" . str_replace("-", "/", $row[2]) . "</td>
 					      <td>" . $row[3] . "</td> 
 					      <td>" . $row[4] . "</td>

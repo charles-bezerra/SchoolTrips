@@ -21,28 +21,70 @@
         } 
     }
 ?>
+
+
 <!DOCTYPE html>
 <html>
-<?php include "includes/head.php" ?>
-<body>
-	<?php include "includes/header.php"; ?>
-	<div class="container text-center" style="margin-top: 90px">
-		<h1 class="display-4 m-5"  style="color:black">Faça login aqui</h1>
-    	<form action="php/controllers.php" method="get" style="width: 40%; margin-left: 30%">
-          <input required="required" type="number" class="form-control" placeholder="Matrícula" name="matricula"><br/>
-      		<input required="required" type="Password" class="form-control" placeholder="Senha" name="senha"><br/>
-      		<button class="btn btn-success" type="submit">Entrar</button><br/>
-          <p style="color: red">
-          <?php 
-              if(isset($_SESSION['Error']))
-              {
-                  echo $_SESSION["Error"]; 
-              }
-          ?><br/>
-      		<a href="cadastro.php" style="color: #b30086;">Não tem conta? Crie uma aqui!</a>
-      </form>
-  	</div>			
-  	
 
+<?php include "includes/head.php" ?>
+
+<body>
+	
+  <?php include "includes/header.php"; ?>
+	
+  <section style="margin-top: 58px">
+      <div class="container">
+            
+
+            <div class="row">
+                 <div class="col-md-3"></div>
+                 <div class="col-md-6">
+                       <?php  if( isset($_SESSION['Error']) ){
+                           if($_SESSION['Error'] != ""){ echo  "<div class='alert alert-danger' role='alert'>" . $_SESSION["Error"] . "</div>"; } 
+                       }?>
+                 </div>
+                 <div class="col-md-3"></div>
+            </div>
+           
+
+            <form action="php/controllers.php" method="get">                    
+
+                        <div class="caixa-form rounded z-depth-2">     
+                            <div class="display-4 text-center">
+                                <p>Faça login aqui</p>          
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input required="required" type="number" class="form-control" placeholder="Matrícula" name="matricula">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input required="required" type="Password" class="form-control" placeholder="Senha" name="senha">
+                                    </div>
+                                </div>
+                            </div>
+                        	 
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <button class="btn btn-success" type="submit">Começar</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <a  class="btn btn-link" href="cadastro.php">Criar conta!</a>
+                                </div>
+                            </div>
+                        </div>
+
+            </form>
+      	</div>
+    </section>			
+    
+    <?php include "includes/footer.php" ?>
+  	
 </body>
 </html>

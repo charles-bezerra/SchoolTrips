@@ -41,7 +41,7 @@ insert into Onibus (placa,lugares,marca) values ('1124BBC',40,'Volkswagen');
 insert into Agendamento (cod_usuario,cod_onibus,data_saida,quantidade_dias,quantidade_ocupantes,aprovacao,detalhes,destino) values ('20151104010436',1,'23/09/2018',4,23,'Em processo', 'dnklendklenekldnekldn', 'Recife-PE');
 select * from Onibus;
 
-insert into Administrador values ('2018','1234','O boy');
+insert into Administrador values ('20183005149','12345678','Admin');
 
 SELECT u.nome, u.matricula, a.data_saida, a.quantidade_ocupantes, a.quantidade_dias, o.marca, o.placa, a.destino, a.id FROM Usuario AS u, Agendamento AS a, Onibus AS o WHERE a.cod_usuario = u.matricula AND a.cod_onibus = o.id AND a.aprovacao = 'Em processo' GROUP BY u.nome, a.data_saida ORDER BY STR_TO_DATE(data_saida,'%d-%m-%Y') DESC;
 select * from Usuario;
